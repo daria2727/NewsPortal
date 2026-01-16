@@ -4,6 +4,8 @@ class News {
     $query = "SELECT * FROM news ORDER BY id DESC LIMIT 3" ;
     $db = new Database();
     $arr = $db->getAll($query);
+    //var_dump($arr);
+    //die();
     return $arr;
     }
 
