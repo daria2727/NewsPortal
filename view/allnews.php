@@ -1,11 +1,10 @@
 <?php
-    $ob_start();
+ob_start();
 ?>
-<h1>Kõik uudised </h1>
+<h1>Kõik uudised</h1>
 <br>
 <?php
 ViewNews::AllNews($arr);
- $content = ob_get_clean();
-    include_once 'view/layout.php';
+$content = ob_get_clean();
+include_once 'view/layout.php';
 ?>
-
