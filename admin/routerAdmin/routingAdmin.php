@@ -19,10 +19,14 @@ elseif ($path == 'logout')
     // Выход
     $response = controllerAdmin::logoutAction();
 }
-//____________________________listNews
-elseif ($path=='newsAdmin')
-     {
+elseif ($path=='newsAdmin') {
     $response=controllerAdminNews::NewsList();
+}
+elseif ($path=='newsAdd') {
+    $response=controllerAdminNews::newsAddForm();
+}
+elseif ($path == 'newsAddResult') {
+    $response = controllerAdminNews::newsAddResult();
 }
 else
 {

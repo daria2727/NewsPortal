@@ -1,11 +1,24 @@
 <?php
-class controllerAdminNews{
+class controllerAdminNews {
 
-    //list News
-    public static function NewsList(){
+    // list News
+    public static function NewsList() {
+        $arr = modelAdminNews::getNewsList();
+        // var_dump($arr);
+        // die;
 
-        $arr=modelAdminNews::getNewsList();
-        include_once 'viewAdmin/newsList.php';
+        include_once('viewAdmin/newsList.php');
     }
-}//class
-?>
+
+    // add News form
+    public static function newsAddForm() {
+        $arr = modelAdminCategory::getCategoryList();
+        include_once('viewAdmin/newsAddForm.php');
+    }
+
+    // add News result / processing
+    public static function newsAddResult() {
+        $test = modelAdminNews::getNewsAdd();
+        include_once('viewAdmin/newsAddForm.php');
+    }
+}
